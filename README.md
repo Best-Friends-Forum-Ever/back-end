@@ -41,6 +41,6 @@ This Forum app is licensed under the [MIT License](https://opensource.org/licens
 - Establish answers that relate to a particular question
 - Establish answer and questions related to the user
 
-## Back-ebnd UML/Data Flow
+## Back-end UML/Data Flow
 
 ![UML](./UML-Data-Flow.png)
