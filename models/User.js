@@ -24,16 +24,6 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
       min: 5,
-    },
-    questions: {
-      type: Array,
-      required: true,
-      default: []
-    },
-    answers: {
-      type: Array,
-      required: true,
-      default: []
     }
   },
   { timestamps: true }
