@@ -6,6 +6,14 @@ const AnswerSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    firstName: {
+      type: String,
+      required: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
+    },
     questionId: {
       type: String,
       required: true,
@@ -13,15 +21,6 @@ const AnswerSchema = mongoose.Schema(
     content: {
       type: String,
       required: true,
-    },
-    upvote: {
-      type: Number,
-      default: 0
-    },
-    questions: {
-      type: Array,
-      required: true,
-      default: [],
     }
   },
   { timestamps: true }

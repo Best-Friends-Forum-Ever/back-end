@@ -19,9 +19,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-/* ROUTES WITH FILES */
 app.post("/auth/register", register);
-app.post("/posts", verifyToken, upload.single("picture"), createPost);
+
 
 /* ROUTES */
 app.use("/auth", authRoutes);
