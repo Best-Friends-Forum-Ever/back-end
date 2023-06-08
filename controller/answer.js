@@ -4,10 +4,10 @@ import User from "../models/User.js";
 // Create
 export const createAnswer = async (req, res) => {
   try {
-    const { userId, content, questionId } = req.body;
-    const user = await User.findById(userId);
+    const { content, questionId } = req.body;
+    const user = await User.findById(req.user.id);
     const newAnswer = new Answer({
-      userId,
+      userId: req.user.id,
       firstName: user.firstName,
       lastName: user.lastName,
       questionId,
