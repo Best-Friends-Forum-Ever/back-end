@@ -7,7 +7,7 @@ export const createQuestion = async (req, res) => {
     const { userId, title, content } = req.body;
     const user = await User.findById(userId);
     const newQuestion = new Question({
-      userId,
+      userId: req.user.id,
       firstName: user.firstName,
       lastName: user.lastName,
       title,

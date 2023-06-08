@@ -7,7 +7,7 @@ export const createAnswer = async (req, res) => {
     const { userId, content, questionId } = req.body;
     const user = await User.findById(userId);
     const newAnswer = new Answer({
-      userId,
+      userId: req.user.id,
       firstName: user.firstName,
       lastName: user.lastName,
       questionId,
