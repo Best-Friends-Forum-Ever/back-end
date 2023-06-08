@@ -33,11 +33,11 @@ export const getAnswerbyQuestionId = async (req, res) => {
   }
 };
 
-export const getUserQuestions = async (req, res) => {
+export const getUserAnswer = async (req, res) => {
   try {
     const { userId } = req.params;
-    const question = await Question.find({ userId });
-    res.status(200).json(question);
+    const answers = await Answer.find({ userId });
+    res.status(200).json(answers);
   } catch (err) {
     res.status(404).json({ message: err.message });
   }
